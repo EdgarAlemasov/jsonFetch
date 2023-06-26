@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GetDataExample from "./components/GetData";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GetDataExample url={process.env.REACT_APP_DATA_URL}/>
+      <GetDataExample url={process.env.REACT_APP_ERROR_URL}/>
+      <GetDataExample url={process.env.REACT_APP_LOADING_URL}/>
     </div>
   );
 }
